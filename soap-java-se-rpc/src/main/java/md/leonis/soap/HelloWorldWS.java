@@ -9,11 +9,15 @@ public class HelloWorldWS implements HelloWorldInterface {
 
     @Override
     public String helloWorldWebMethod(String name) {
-        return "Hello World JAX-WS " + name;
+        System.out.println("Method helloWorldWebMethod received: " + name + "");
+        return "From WS: Hello World JAX-WS " + name;
     }
 
     @Override
     public ArrayList<String> helloWorldArrayListWebMethod(String name) {
-        return new ArrayList<>(Arrays.asList("Response", helloWorldWebMethod(name)));
+        System.out.println("Method helloWorldArrayListWebMethod received: " + name + "");
+        String nameFromMethod = helloWorldWebMethod(name);
+        System.out.println("nameFromMethod:" + nameFromMethod);
+        return new ArrayList<>(Arrays.asList("Response", nameFromMethod));
     }
 }

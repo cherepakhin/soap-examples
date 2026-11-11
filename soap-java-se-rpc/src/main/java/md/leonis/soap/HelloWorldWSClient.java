@@ -16,7 +16,7 @@ public class HelloWorldWSClient {
 
         HelloWorldInterface hello = service.getPort(HelloWorldInterface.class);
 
-        System.out.println(hello.helloWorldWebMethod("Leonis"));
-        System.out.println(hello.helloWorldArrayListWebMethod("Leonis"));
+        System.out.println("1. " + hello.helloWorldWebMethod("Leonis"));
+        System.out.println("2. " + hello.helloWorldArrayListWebMethod("Leonis"));
     }
 }
