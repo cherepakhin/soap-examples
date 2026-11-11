@@ -14,9 +14,10 @@ public final class Client {
             factory.setAddress("http://localhost:9000/Hello");
         }
         //factory.getServiceFactory().setDataBinding(new AegisDatabinding());
-        HelloWorldService client = factory.create(HelloWorldService.class);
+        HelloWorldService remoteService = factory.create(HelloWorldService.class);
         System.out.println("Invoke sayHi()....");
-        System.out.println(client.sayHi(System.getProperty("user.name")));
+        String response = remoteService.sayHi(System.getProperty("user.name"));
+        System.out.println(response);
         System.exit(0);
     }
 
