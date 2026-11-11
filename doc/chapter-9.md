@@ -193,7 +193,7 @@ public class IntegerUserMap {
 Сервис:
 
 ```java
-@WebService(endpointInterface = "demo.hw.server.HelloWorld", serviceName = "HelloWorld")
+@WebService(endpointInterface = "demo.hw.server.HelloWorldService", serviceName = "HelloWorld")
 public class HelloWorldImpl implements HelloWorld {
 
     private Map<Integer, User> users = new LinkedHashMap<>();
@@ -316,7 +316,7 @@ public final class Client {
 Connected to the target VM, address: '127.0.0.1:57760', transport: 'socket'
 Starting Server
 Jul 23, 2019 6:23:27 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
-INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorld
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
 Jul 23, 2019 6:23:28 PM org.apache.cxf.endpoint.ServerImpl initDestination
 INFO: Setting the server's publish address to be http://localhost:9000/helloWorld
 Jul 23, 2019 6:23:28 PM org.eclipse.jetty.util.log.Log initialized
@@ -364,9 +364,9 @@ INFO: RESP_OUT
 
 ```
 Jul 23, 2019 6:23:58 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
-INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorld
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
 Jul 23, 2019 6:23:59 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
-INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorld
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
 Hello World
 Hello World
 Hello Galaxy

@@ -38,7 +38,7 @@
 Кстати, если при запуске встречается следующая ошибка:
 
 ```
-INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorld
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
 Jul 23, 2019 6:20:58 PM org.apache.cxf.transport.http.HTTPTransportFactory getDestination
 SEVERE: Cannot find any registered HttpDestinationFactory from the Bus.
 Exception in thread "main" javax.xml.ws.WebServiceException: org.apache.cxf.service.factory.ServiceConstructionException
@@ -152,9 +152,9 @@ public class Server {
 но факт остаётся фактом - ендпоинт был создан. Логи:
 
 ```
-INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorld
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
 Invoke sayHi()....
-Exception in thread "main" org.apache.cxf.binding.soap.SoapFault: Could not instantiate service class demo.hw.server.HelloWorld because it is an interface.
+Exception in thread "main" org.apache.cxf.binding.soap.SoapFault: Could not instantiate service class demo.hw.server.HelloWorldService because it is an interface.
 ```
 
 Естественно, эту фабрику сервисов можно настраивать так, как душе угодно. Например: 
@@ -187,7 +187,7 @@ Exception in thread "main" org.apache.cxf.binding.soap.SoapFault: Could not inst
 ```java
 //import org.apache.cxf.aegis.databinding.AegisDatabinding;
 import org.apache.cxf.frontend.ClientProxyFactoryBean;
-import demo.hw.server.HelloWorld;
+import demo.hw.server.HelloWorldService;
 
 public final class Client {
 

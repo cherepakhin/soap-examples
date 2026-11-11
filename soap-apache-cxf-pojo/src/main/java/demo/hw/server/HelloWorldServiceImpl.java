@@ -1,6 +1,6 @@
 package demo.hw.server;
 
-public class HelloWorldImpl implements HelloWorld {
+public class HelloWorldServiceImpl implements HelloWorldService {
 
     public String sayHi(String text) {
         System.out.println("sayHi called");

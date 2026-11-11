@@ -1,6 +1,6 @@
 package demo.hw.server;
 
-public interface HelloWorld {
+public interface HelloWorldService {
 
     String sayHi(String text);
 }

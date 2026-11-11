@@ -32,5 +32,14 @@ Using either UNIX or Windows:
   mvn -Pserver  (from one command line window)
   mvn -Pclient  (from a second command line window)
 
+```text
+Nov 11, 2026 5:33:51 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
+Invoke sayHi()....
+Hello vasi
+```
+
+'vasi' - username received from the server.
+
 To remove the code generated from the WSDL file and the .class
 files, run "mvn clean".

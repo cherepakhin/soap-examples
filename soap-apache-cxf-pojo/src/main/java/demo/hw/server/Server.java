@@ -9,9 +9,9 @@ import org.apache.cxf.frontend.ServerFactoryBean;
 public class Server {
 
     protected Server() {
-        HelloWorldImpl helloworldImpl = new HelloWorldImpl();
+        HelloWorldServiceImpl helloworldImpl = new HelloWorldServiceImpl();
         ServerFactoryBean svrFactory = new ServerFactoryBean();
-        svrFactory.setServiceClass(HelloWorld.class);
+        svrFactory.setServiceClass(HelloWorldService.class);
         svrFactory.setAddress("http://localhost:9000/Hello");
         svrFactory.setServiceBean(helloworldImpl);
         svrFactory.setFeatures(Collections.singletonList(new LoggingFeature()));

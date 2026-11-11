@@ -9,12 +9,88 @@ Building and running the demo using Maven
 From the base directory of this sample (i.e., where this README file is
 located), the pom.xml file is used to build and run the demo. 
 
+Used Java 8:
+
+```shell
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+```
+
 Using either UNIX or Windows:
 
   mvn clean install   (builds the demo and creates a WAR file for optional Tomcat deployment)
   mvn -Pserver  (from one command line window -- only if using a non-WAR standalone service)
   mvn -Pclient  (from a second command line window)
 
+Client protocol:
+
+````text
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running demo.hw.server.HelloWorldImplTest
+sayHiToUser called
+sayHiToUser called
+getUsers called
+sayHi called
+sayHiToUser called
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- exec-maven-plugin:3.6.3:java (default) @ soap-apache-cxf-jax-ws ---
+Nov 11, 2026 5:28:23 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
+Nov 11, 2026 5:28:24 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
+Hello World
+Hello World
+Hello Galaxy
+Hello Universe
+
+Users: 
+  1: World
+  2: Galaxy
+  3: Universe
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running demo.hw.server.HelloWorldImplTest
+sayHiToUser called
+sayHiToUser called
+getUsers called
+sayHi called
+sayHiToUser called
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- exec-maven-plugin:3.6.3:java (default) @ soap-apache-cxf-jax-ws ---
+Nov 11, 2026 5:28:23 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
+Nov 11, 2026 5:28:24 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://server.hw.demo/}HelloWorld from class demo.hw.server.HelloWorldService
+Hello World
+Hello World
+Hello Galaxy
+Hello Universe
+
+Users: 
+  1: World
+  2: Galaxy
+  3: Universe
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+````
 
 To remove the code generated from the WSDL file and the .class
 files, run "mvn clean".

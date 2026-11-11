@@ -2,7 +2,7 @@ package demo.hw.client;
 
 //import org.apache.cxf.aegis.databinding.AegisDatabinding;
 import org.apache.cxf.frontend.ClientProxyFactoryBean;
-import demo.hw.server.HelloWorld;
+import demo.hw.server.HelloWorldService;
 
 public final class Client {
 
@@ -14,7 +14,7 @@ public final class Client {
             factory.setAddress("http://localhost:9000/Hello");
         }
         //factory.getServiceFactory().setDataBinding(new AegisDatabinding());
-        HelloWorld client = factory.create(HelloWorld.class);
+        HelloWorldService client = factory.create(HelloWorldService.class);
         System.out.println("Invoke sayHi()....");
         System.out.println(client.sayHi(System.getProperty("user.name")));
         System.exit(0);
