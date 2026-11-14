@@ -8,14 +8,14 @@ public class HelloWorldImplTest {
 
     @Test
     public void testSayHi() {
-        HelloWorldImpl hwi = new HelloWorldImpl();
+        HelloWorldServiceImpl hwi = new HelloWorldServiceImpl();
         String response = hwi.sayHi("Bob");
         assertEquals("SayHi isn't returning expected string", "Hello Bob", response);
     }
 
     @Test
     public void testSayHiToUser() {
-        HelloWorldImpl hwi = new HelloWorldImpl();
+        HelloWorldServiceImpl hwi = new HelloWorldServiceImpl();
         User sam = new UserImpl("Sam");
         String response = hwi.sayHiToUser(sam);
         assertEquals("SayHiToUser isn't returning expected string", "Hello Sam", response);
@@ -23,7 +23,7 @@ public class HelloWorldImplTest {
 
     @Test
     public void testGetUsers() {
-        HelloWorldImpl hwi = new HelloWorldImpl();
+        HelloWorldServiceImpl hwi = new HelloWorldServiceImpl();
         User mike = new UserImpl("Mike");
         hwi.sayHiToUser(mike);
 

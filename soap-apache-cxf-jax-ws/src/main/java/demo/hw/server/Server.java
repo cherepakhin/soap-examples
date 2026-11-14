@@ -8,7 +8,7 @@ public class Server {
 
     private Server() {
         System.out.println("Starting Server");
-        HelloWorldImpl implementor = new HelloWorldImpl();
+        HelloWorldService implementor = new HelloWorldServiceImpl();
         String address = "http://localhost:9000/helloWorld";
         Endpoint.publish(address, implementor, new LoggingFeature());
     }

@@ -6,7 +6,7 @@ import javax.jws.WebService;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @WebService
-public interface HelloWorld {
+public interface HelloWorldService {
 
     String sayHi(String text);
 
