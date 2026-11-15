@@ -14,24 +14,33 @@ public final class Client {
         factory.setServiceClass(HelloWorldService.class);
         factory.setAddress("http://127.0.0.1:9000/helloWorld");
 
-        HelloWorldService hw = factory.create(HelloWorldService.class);
+        HelloWorldService helloWorldService = factory.create(HelloWorldService.class);
+        System.out.println("Start---------------------------------");
 
-        String answer = hw.sayHi("World");
+        System.out.println("hw.sayHi(\"World\"):");
+        String answer = helloWorldService.sayHi("World");
         System.out.println(answer);
+        System.out.println("--------------------------------------");
 
+        System.out.println("hw.sayHiToUser(user) for User=\"World\":");
         User user = new UserImpl("World");
-        System.out.println(hw.sayHiToUser(user));
+        System.out.println(helloWorldService.sayHiToUser(user));
+        System.out.println("--------------------------------------");
 
         //say hi to some more users to fill up the map a bit
+        System.out.println("hw.sayHiToUser(user) for User=\"Galaxy\":");
         user = new UserImpl("Galaxy");
-        System.out.println(hw.sayHiToUser(user));
+        System.out.println(helloWorldService.sayHiToUser(user));
+        System.out.println("--------------------------------------");
 
+        System.out.println("hw.sayHiToUser(user) for User=\"Universe\":");
         user = new UserImpl("Universe");
-        System.out.println(hw.sayHiToUser(user));
+        System.out.println(helloWorldService.sayHiToUser(user));
+        System.out.println("--------------------------------------");
 
         System.out.println();
         System.out.println("Users: ");
-        Map<Integer, User> users = hw.getUsers();
+        Map<Integer, User> users = helloWorldService.getUsers();
 
         for (Map.Entry<Integer, User> e : users.entrySet()) {
             System.out.println("  " + e.getKey() + ": " + e.getValue().getName());

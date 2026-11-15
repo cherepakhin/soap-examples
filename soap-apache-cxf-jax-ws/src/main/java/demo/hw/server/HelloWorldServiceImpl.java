@@ -4,8 +4,12 @@ import javax.jws.WebService;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-// Публикация веб-сервиса, реализующий интерфейс `demo.hw.server.HelloWorld` с именем `HelloWorld`
-// Затем этот веб-сервис будет привязан к URL-адресу `http://localhost:9000/helloWorld` ы Server.java
+// Публикация веб-сервиса, реализующий интерфейс `demo.hw.server.HelloWorld` с именем `HelloWorldService`
+// Затем этот веб-сервис будет привязан к URL-адресу `http://localhost:9000/helloWorld` в Server.java
+//        HelloWorldService implementor = new HelloWorldServiceImpl();
+//        String address = "http://localhost:9000/helloWorld";
+//        Endpoint.publish(address, implementor, new org.apache.cxf.ext.logging.LoggingFeature());
+
 @WebService(endpointInterface = "demo.hw.server.HelloWorldService", serviceName = "HelloWorldService")
 public class HelloWorldServiceImpl implements HelloWorldService {
 

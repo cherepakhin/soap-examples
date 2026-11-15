@@ -16,6 +16,7 @@ public class Server {
     public static void main(String[] args) throws Exception {
         new Server();
         System.out.println("Server ready...");
+        System.out.println("========================================================");
 
         Thread.sleep(5 * 60 * 1000);
         System.out.println("Server exiting");
