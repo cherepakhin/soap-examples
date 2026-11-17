@@ -1,4 +1,8 @@
-Взято из [https://github.com/LeonisX/soap-examples](https://github.com/LeonisX/soap-examples)
+# Примеры использования SOAP в Java.
+
+### Взято из [https://github.com/LeonisX/soap-examples](https://github.com/LeonisX/soap-examples)
+
+[https://v.perm.ru/index.php/component/content/article/soap-doc?catid=15](Руководство по использованию SOAP в Java.)
 
 Оригинальный Readme от LeonisX:
 
