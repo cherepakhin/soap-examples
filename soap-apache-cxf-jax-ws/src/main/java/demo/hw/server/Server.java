@@ -6,20 +6,14 @@ import org.apache.cxf.ext.logging.LoggingFeature;
 
 public class Server {
 
-    private Server() {
-        System.out.println("Starting Server");
-        HelloWorldService implementor = new HelloWorldServiceImpl();
+    public Server() {
+        System.out.println("Server: Starting Server");
+        System.out.println("Server: ========================================================");
+        HelloWorldService helloWorldServiceImpl = new HelloWorldServiceImpl();
         String address = "http://localhost:9000/helloWorld";
-        Endpoint.publish(address, implementor, new LoggingFeature());
-    }
-
-    public static void main(String[] args) throws Exception {
-        new Server();
-        System.out.println("Server ready...");
-        System.out.println("========================================================");
-
-        Thread.sleep(5 * 60 * 1000);
-        System.out.println("Server exiting");
-        System.exit(0);
+        // запросы по адресу http://localhost:9000/helloWorld будут отрабатываться helloWorldServiceImpl
+        // Сервис будет представлен в виде интерфейса HelloWorldService
+        Endpoint.publish(address, helloWorldServiceImpl, new LoggingFeature());
+        System.out.println("Server: end publish");
     }
 }

@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH="$JAVA_HOME/bin:$PATH"
 PROJECT_DIR=/home/vasi/prog/java/soap/soap-examples/soap-apache-cxf-jax-ws
@@ -14,4 +15,4 @@ CP="target/classes:$(mvn dependency:build-classpath -Dmdep.outputFile=/dev/stdou
 
 # Start server
 echo "Starting server on http://localhost:9000/helloWorld ..."
-$JAVA_HOME/bin/java -cp "$CP" demo.hw.server.Server
+$JAVA_HOME/bin/java -cp "$CP" demo.hw.server.RunServer

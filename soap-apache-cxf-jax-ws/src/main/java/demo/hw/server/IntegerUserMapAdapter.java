@@ -7,6 +7,7 @@ import java.util.Map;
 public class IntegerUserMapAdapter extends XmlAdapter<IntegerUserMap, Map<Integer, User>> {
 
     public IntegerUserMap marshal(Map<Integer, User> v) {
+        System.out.println("IntegerUserMapAdapter.marshal()");
         IntegerUserMap map = new IntegerUserMap();
         for (Map.Entry<Integer, User> e : v.entrySet()) {
             IntegerUserMap.IntegerUserEntry iue = new IntegerUserMap.IntegerUserEntry();
@@ -18,6 +19,7 @@ public class IntegerUserMapAdapter extends XmlAdapter<IntegerUserMap, Map<Intege
     }
 
     public Map<Integer, User> unmarshal(IntegerUserMap v) {
+        System.out.println("IntegerUserMapAdapter.UNmarshal()");
         Map<Integer, User> map = new LinkedHashMap<>();
         for (IntegerUserMap.IntegerUserEntry e : v.getEntries()) {
             map.put(e.getId(), e.getUser());

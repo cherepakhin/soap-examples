@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH="$JAVA_HOME/bin:$PATH"
 PROJECT_DIR=/home/vasi/prog/java/soap/soap-examples/soap-apache-cxf-jax-ws

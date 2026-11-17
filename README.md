@@ -1,3 +1,7 @@
+Взято из [https://github.com/LeonisX/soap-examples](https://github.com/LeonisX/soap-examples)
+
+Оригинальный Readme от LeonisX:
+
 # Simple examples of SOAP JAX-WS servers and clients for Maven and Java 8
 # Простые примеры серверов и клиентов SOAP JAX-WS для Maven и Java 8
 
