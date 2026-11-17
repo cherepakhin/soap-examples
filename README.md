@@ -2,7 +2,7 @@
 
 ### Взято из [https://github.com/LeonisX/soap-examples](https://github.com/LeonisX/soap-examples)
 
-[https://v.perm.ru/index.php/component/content/article/soap-doc?catid=15](Руководство по использованию SOAP в Java.)
+[Руководство по использованию SOAP в Java.](https://v.perm.ru/index.php/component/content/article/soap-doc?catid=15)
 
 Оригинальный Readme от LeonisX:
 
